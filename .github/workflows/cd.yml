@@ -3,7 +3,7 @@ name: Continuous Deployment
 on: 
   push:
     branches:
-      - master
+      - main
  
 jobs:
   deploy:
@@ -19,7 +19,7 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           cd ~/forum-api-with-clean-arciteture-full-automation-testing-and-CICD
-          git pull origin master
+          git pull origin main
           npm ci --omit=dev --no-audit --no-fund
           npm run migrate up
           pm2 restart forum-api-with-clean-arciteture-full-automation-testing-and-CICD
