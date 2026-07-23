@@ -5,9 +5,7 @@ import ThreadRepository from '../../../Domains/threads/ThreadRepository.js';
 import NewThreadUseCase from '../NewThreadUseCase.js';
 
 describe('NewThreadUseCase', () => {
-  /**
-   * Menguji apakah use case mampu mengoskestrasikan langkah demi langkah dengan benar.
-   */
+  /** Menguji apakah use case mampu mengoskestrasikan langkah demi langkah dengan benar. */
   it('should orchestrating the add thread action correctly', async () => {
     // Arrange
     const useCasePayload = {
